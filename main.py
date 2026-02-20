@@ -588,54 +588,90 @@ def hybrid_methodical_simplification(Wk_expr):
 
 
 
-def strict_methodical_simplification():
+def strict_methodical_simplification(Wk_expr):
 
     print("\n=== СТРОГО МЕТОДИЧНЕ СПРОЩЕННЯ ===")
 
     s = sp.symbols('s')
 
-    n = int(input("Кількість переломів: "))
+    # --- Введення переломів вручну ---
+    w1 = float(input("Введіть ω1 (інтегратор): "))
+    w2 = float(input("Введіть ω2 (нуль 2-го порядку): "))
+    w3 = float(input("Введіть ω3 (полюс 1-го порядку): "))
 
-    current_slope = float(input("Початковий нахил Lk (дБ/дек): "))
+    T1 = 1 / w1
+    T2 = 1 / w2
+    T3 = 1 / w3
 
-    Wk = 1
+    print("\nОберіть режим:")
+    print("1 — ξ вводиться вручну")
+    print("2 — ξ оптимізується")
 
-    for i in range(n):
+    mode = input("Ваш вибір (1/2): ")
 
-        print(f"\nПерелом {i+1}")
-        w = float(input("ω = "))
-        slope_after = float(input("Нахил після перелому (дБ/дек): "))
+    # --- Підготовка точної ЛАЧХ ---
+    Wk_expr = sp.together(Wk_expr)
+    num, den = sp.fraction(Wk_expr)
+    num = sp.expand(num)
+    den = sp.expand(den)
 
-        delta = slope_after - current_slope
-        current_slope = slope_after
+    num_poly = sp.Poly(num, s)
+    den_poly = sp.Poly(den, s)
 
-        T = 1 / w
+    num_c = [float(c) for c in num_poly.all_coeffs()]
+    den_c = [float(c) for c in den_poly.all_coeffs()]
 
-        if delta == -20:
-            print("→ Інтегратор")
-            Wk *= 1/(T*s)
+    tf_exact = signal.TransferFunction(num_c, den_c)
 
-        elif delta == 20:
-            print("→ Форсуюча 1-го порядку")
-            Wk *= (T*s + 1)
+    w = np.logspace(-3, 2, 2000)
+    _, mag_exact, _ = signal.bode(tf_exact, w)
 
-        elif delta == 40:
-            print("→ Форсуюча 2-го порядку")
-            xi = float(input("Введіть ξ (0.5–0.95): "))
-            Wk *= (T**2*s**2 + 2*xi*T*s + 1)
+    # --- Варіант 1: ручний ξ ---
+    if mode == "1":
 
-        elif delta == -40:
-            print("→ Коливальна 2-го порядку")
-            xi = float(input("Введіть ξ (0.5–0.95): "))
-            Wk *= 1/(T**2*s**2 + 2*xi*T*s + 1)
+        xi = float(input("Введіть ξ (0.5–0.95): "))
+        print(f"\nПрийнято ξ = {xi}")
 
-        else:
-            print("⚠ Нестандартна зміна нахилу")
+    # --- Варіант 2: оптимізація ξ ---
+    else:
 
-    print("\n--- Спрощена модель Wk(s) ---\n")
-    sp.pprint(sp.simplify(Wk), use_unicode=True)
+        def error_function(x):
+            xi = float(x[0])
 
-    return Wk
+            Wa = (1/(T1*s)) * \
+                 (T2**2*s**2 + 2*xi*T2*s + 1) / \
+                 (T3*s + 1)
+
+            Wa = sp.together(Wa)
+            n, d = sp.fraction(Wa)
+            n = sp.expand(n)
+            d = sp.expand(d)
+
+            n_poly = sp.Poly(n, s)
+            d_poly = sp.Poly(d, s)
+
+            n_c = [float(c) for c in n_poly.all_coeffs()]
+            d_c = [float(c) for c in d_poly.all_coeffs()]
+
+            tf_a = signal.TransferFunction(n_c, d_c)
+            _, mag_a, _ = signal.bode(tf_a, w)
+
+            return np.mean((mag_exact - mag_a)**2)
+
+        res = minimize(error_function, x0=[0.7], bounds=[(0.3, 0.99)])
+        xi = res.x[0]
+
+        print(f"\nОптимізоване ξ ≈ {xi:.3f}")
+
+    # --- Формування моделі ---
+    Wk_approx = (1/(T1*s)) * \
+                (T2**2*s**2 + 2*xi*T2*s + 1) / \
+                (T3*s + 1)
+
+    print("\n--- Спрощена модель (методична) ---\n")
+    sp.pprint(sp.simplify(Wk_approx), use_unicode=True)
+
+    return Wk_approx
 
 
 def plot_closed_loop_step(W_expr):
@@ -830,7 +866,7 @@ def main():
     if choice == "1":
         Wk_approx = hybrid_methodical_simplification(Wk_expr)
     else:
-        Wk_approx = strict_methodical_simplification()
+        Wk_approx = strict_methodical_simplification(Wk_expr)
 
 
         # 1. Замкнена система
