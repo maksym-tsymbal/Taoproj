@@ -2,7 +2,7 @@
 
 **Попробуйте базовый шаблон календаря от GudHub CRM прямо сейчас**
 
-[iframe-sandbox](https://app.gudhub.com?auth=rD%2BD1ByRFQeYwoOTleDRSPfszeUzQXYeUP6aHK%2FePVsR04zeXi5FWw3dL9UIHR6cWiDapi3Jl9p6LCWL9LvANLTFK7bwiF6emOmCiJKVG3w%3D)
+[iframe-sandbox](https://app.gudhub.com?auth=rD%2BD1ByRFQeYwoOTleDRSPfszeUzQXYeUP6aHK%2FePVsR04zeXi5FWw3dL9UIHR6cWiDapi3Jl9p6LCWL9LvANLTFK7bwiF6emOmCiJKVG3w%3D&demo=true)
 
 Для удобства использования функционал можно адаптировать: добавить необходимые категории, настроить поля, напоминания, ответственных лиц, уведомления и другие инструменты для планирования. Такая гибкость позволяет создать решение, которое максимально соответствует особенностям вашего бизнеса.
 
