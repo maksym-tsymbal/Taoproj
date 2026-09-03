@@ -8,11 +8,15 @@
 
 ## Основные возможности календаря в GudHub CRM:
 
+[iframe-sandbox](https://app.gudhub.com/act/open_app/41832/2096909?auth=rD%2BD1ByRFQeYwoOTleDRSPfszeUzQXYeUP6aHK%2FePVsR04zeXi5FWw3dL9UIHR6cWiDapi3Jl9p6LCWL9LvANLTFK7bwiF6emOmCiJKVG3w%3D&demo=true)
+
 ### Розклад під повним контролем
 
 Все запланированные события собраны в одном месте, что позволяет быстро оценить загруженность команды на день, неделю или месяц. Это помогает лучше планировать работу и избегать накладок в графике.
 
 ### Различные способы просмотра
+
+[iframe-sandbox](https://app.gudhub.com/act/open_app/41834/2097015?auth=rD%2BD1ByRFQeYwoOTleDRSPfszeUzQXYeUP6aHK%2FePVsR04zeXi5FWw3dL9UIHR6cWiDapi3Jl9p6LCWL9LvANLTFK7bwiF6emOmCiJKVG3w%3D&demo=true)
 
 Выберите формат отображения календаря: месяц, неделя, день или список. Различные режимы позволяют быстро анализировать расписание и работать с информацией наиболее удобным для вас способом.
 
