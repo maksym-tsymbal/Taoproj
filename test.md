@@ -10,7 +10,7 @@ The GitHub CRM template for dance schools is a ready-to-use solution that doesnâ
 
 [iframe-sandbox](https://dev.gudhub.com?auth=q7cB8dVNqTsRzqmQicb77xJLEYi/FWELnQyFDcwnj4gvNY7r2qvJLDmkYG0plcgcr965oI8EKpW/1qeKZvHI6Q==&demo=true)
 
-[![GudHub CRM]([https://gudhub.com.ua/assets/images/banner.jpg](https://app.gudhub.com:443/userdata/42490/1221530.png))](https://gudhub.com.ua/)
+[![GudHub CRM](https://app.gudhub.com:443/userdata/42490/1221530.png)](https://gudhub.com.ua/)
 
 Store important information about students in a single electronic database. All school staff members have quick access to contact information, dates of birth, and client status, and can specify a group and add important notes.
 
