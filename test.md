@@ -8,7 +8,7 @@ The GitHub CRM template for dance schools is a ready-to-use solution that doesnâ
 
 ## A Single Customer Database
 
-[![iframe-sandbox](https://app.gudhub.com:443/userdata/42490/1221530.png)](https://dev.gudhub.com?auth=q7cB8dVNqTsRzqmQicb77xJLEYi/FWELnQyFDcwnj4gvNY7r2qvJLDmkYG0plcgcr965oI8EKpW/1qeKZvHI6Q==&demo=true)
+[![iframe-sandbox](https://app.gudhub.com:443/userdata/42490/1221629.jpg)](https://dev.gudhub.com?auth=q7cB8dVNqTsRzqmQicb77xJLEYi/FWELnQyFDcwnj4gvNY7r2qvJLDmkYG0plcgcr965oI8EKpW/1qeKZvHI6Q==&demo=true)
 
 Store important information about students in a single electronic database. All school staff members have quick access to contact information, dates of birth, and client status, and can specify a group and add important notes.
 
@@ -18,7 +18,7 @@ This allows you to store all data in one place, find it quickly, and maintain ef
 
 ## Organizing Groups of Students
 
-[![iframe-sandbox](https://app.gudhub.com:443/userdata/42490/1221532.png)](https://dev.gudhub.com/act/open_app/41426/2066512?auth=q7cB8dVNqTsRzqmQicb77xJLEYi/FWELnQyFDcwnj4gvNY7r2qvJLDmkYG0plcgcr965oI8EKpW/1qeKZvHI6Q==&demo=true)
+[![iframe-sandbox](https://app.gudhub.com:443/userdata/42490/1221628.jpg)](https://dev.gudhub.com/act/open_app/41426/2066512?auth=q7cB8dVNqTsRzqmQicb77xJLEYi/FWELnQyFDcwnj4gvNY7r2qvJLDmkYG0plcgcr965oI8EKpW/1qeKZvHI6Q==&demo=true)
 
 Group students by dance style, age, or skill level.
 
