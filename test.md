@@ -18,7 +18,7 @@ This allows you to store all data in one place, find it quickly, and maintain ef
 
 ## Organizing Groups of Students
 
-[iframe-sandbox](https://dev.gudhub.com/act/open_app/41426/2066512?auth=q7cB8dVNqTsRzqmQicb77xJLEYi/FWELnQyFDcwnj4gvNY7r2qvJLDmkYG0plcgcr965oI8EKpW/1qeKZvHI6Q==&demo=true)
+[![iframe-sandbox](https://app.gudhub.com:443/userdata/42490/1221530.png)](https://dev.gudhub.com/act/open_app/41426/2066512?auth=q7cB8dVNqTsRzqmQicb77xJLEYi/FWELnQyFDcwnj4gvNY7r2qvJLDmkYG0plcgcr965oI8EKpW/1qeKZvHI6Q==&demo=true)
 
 Group students by dance style, age, or skill level.
 
@@ -28,7 +28,7 @@ This greatly simplifies lesson planning and allows you to manage the team’s wo
 
 ## Course Catalog
 
-[iframe-sandbox](https://dev.gudhub.com/act/open_app/41129/2064858?auth=q7cB8dVNqTsRzqmQicb77xJLEYi/FWELnQyFDcwnj4gvNY7r2qvJLDmkYG0plcgcr965oI8EKpW/1qeKZvHI6Q==&demo=true)
+[![iframe-sandbox](https://app.gudhub.com:443/userdata/42490/1221530.png)](https://dev.gudhub.com/act/open_app/41129/2064858?auth=q7cB8dVNqTsRzqmQicb77xJLEYi/FWELnQyFDcwnj4gvNY7r2qvJLDmkYG0plcgcr965oI8EKpW/1qeKZvHI6Q==&demo=true)
 
 All dance styles are available in a single catalog, which makes it easy to quickly find the information you need about each course.
 
